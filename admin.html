@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>RNU – Painel do Administrador</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #1c1c1c;
+      color: white;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    input, button {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0;
+      font-size: 16px;
+    }
+    button {
+      background: #0b5ed7;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+    .box {
+      max-width: 400px;
+      margin: auto;
+      background: #2a2a2a;
+      padding: 15px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="box">
+  <h1>RNU – Admin</h1>
+
+  <input type="text" id="candidato" placeholder="Nome do candidato">
+  <button onclick="add()">Cadastrar candidato</button>
+
+  <p id="msg"></p>
+</div>
+
+<script>
+function add() {
+  const nome = document.getElementById("candidato").value;
+  if (!nome) {
+    alert("Digite o nome do candidato");
+    return;
+  }
+  document.getElementById("msg").innerText =
+    "Candidato cadastrado (simulação): " + nome;
+}
+</script>
+
+</body>
+</html>
